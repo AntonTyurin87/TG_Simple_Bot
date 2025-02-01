@@ -150,6 +150,13 @@ func callbackHandler(ctx context.Context, b *bot.Bot, update *models.Update) {
 		}
 		returnMenu(ctx, b, update)
 
+	case "button_6":
+		b.SendMediaGroup(ctx, &bot.SendMediaGroupParams{
+			ChatID: update.CallbackQuery.Message.Message.Chat.ID,
+			Media:  Configuration.OnePhoto(),
+		})
+		returnMenu(ctx, b, update)
+
 	default:
 		returnMenu(ctx, b, update)
 	}

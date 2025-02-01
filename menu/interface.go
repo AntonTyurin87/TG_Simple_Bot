@@ -17,6 +17,8 @@ func StartMenu() *models.InlineKeyboardMarkup {
 			{Text: "История разработки проекта", CallbackData: "button_4"},
 		}, {
 			{Text: "Материалы проекта", CallbackData: "button_5"},
+		}, {
+			{Text: "Кнопка для 1 фото", CallbackData: "button_6"},
 		},
 	}}
 }
